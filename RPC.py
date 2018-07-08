@@ -12,22 +12,34 @@ Round = 1
 #Player Choice at Line 30.
 
 
+doRPC=input("Would you like to play Rock Paper Scissors with a bot ?: \n")
 
-if input("Would you like to play Rock Paper Scissors with a bot ?: \n").upper() == "YES":
+if doRPC.upper() == "YES":
     sleep(0.5)
     print("Alright Lets Start ! (...)")
     sleep(2)
-else:
-    if input("Are you Sure ? \n").upper() == "YES":
+elif doRPC.upper()=="NO":
+    sureRPC = input("Are you Sure ? \n")
+    if sureRPC.upper() == "YES":
         sleep(0.5)
         print("Ok then Shutting down ...")
         sleep(2)
         quit()
-    else:
+    elif sureRPC.upper()=="NO":
         sleep(0.5)
         print("Lets play the game then...")
         sleep(2)
-
+    else:
+        print("[Consol] ERROR only say Yes or No on these types of questions")
+        exit()
+else:
+    print("[Consol] ERROR only say Yes or No on these types of questions")
+    exit()
+try:
+    del doRPC
+    del sureRPC
+except NameError:
+    pass
 Player = input("Please pick a Username: ")
 
 # vvvvvvv Game Starts from here vvvvvvv
