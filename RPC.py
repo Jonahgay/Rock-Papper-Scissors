@@ -9,7 +9,7 @@ RPC_Choices = ["Rock","Paper","Scissors"]
 Player_Score = 0
 Computer_Score = 0
 Round = 1
-#Player Choice at Line 30.
+#Player Choice at Line 49.
 
 
 doRPC=input("Would you like to play Rock Paper Scissors with a bot ?: \n")
