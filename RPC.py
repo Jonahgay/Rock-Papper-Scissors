@@ -33,7 +33,7 @@ elif doRPC.upper()=="NO":
         print("[Consol] ERROR only say Yes or No on these types of questions")
         exit()
 else:
-    print("[Consol] ERROR only say Yes or No on these types of questions")
+    print("[Consol] ERROR only type Yes or No on these kind of questions")
     exit()
 
 del doRPC
