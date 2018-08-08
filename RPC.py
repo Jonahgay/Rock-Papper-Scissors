@@ -41,6 +41,7 @@ try:
     del sureRPC
 except NameError:
     pass
+
 Player = input("Please pick a Username: ")
 
 # vvvvvvv Game Starts from here vvvvvvv
