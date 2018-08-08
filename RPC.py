@@ -5,7 +5,7 @@ from time import sleep
 
 '''
 
-RPC_Choices = ["Rock","Paper","Scissors"]
+RPC_Choices = ["ROCK","PAPER","SCISSORS"]
 Player_Score = 0
 Computer_Score = 0
 Round = 1
@@ -51,14 +51,17 @@ while True:
     Player_Choice = input("Rock, paper or scissors ?\n")
     Computer_Choice = choice(RPC_Choices)
     sleep(0.5)
-    if (Player_Choice.upper() ==  "ROCK" and Computer_Choice.upper() == "PAPER") or (Player_Choice.upper() == "PAPER" and Computer_Choice.upper() == "SCISSORS") or (Player_Choice.upper() == "SCISSORS" and Computer_Choice.upper() == "ROCK"):
+    if (Player_Choice.upper() ==  RPC_Choices[0] and Computer_Choice.upper() == RPC_Choices[1]) or (Player_Choice.upper() == RPC_Choices[1] and Computer_Choice.upper() == RPC_Choices[2]) or (Player_Choice.upper() == RPC_Choices[2] and Computer_Choice.upper() == RPC_Choices[0]):
         Computer_Score += 1
         print(Player+" "+str(Player_Score)+" -(Computer Won)- "+str(Computer_Score)+" Computer"+"\n")
-    elif (Player_Choice.upper() ==  "ROCK" and Computer_Choice.upper() == "SCISSORS") or (Player_Choice.upper() == "PAPER" and Computer_Choice.upper() == "ROCK") or (Player_Choice.upper() == "SCISSORS" and Computer_Choice.upper() == "PAPER"):
+    elif (Player_Choice.upper() ==  RPC_Choices[0] and Computer_Choice.upper() == RPC_Choices[2]) or (Player_Choice.upper() == RPC_Choices[1] and Computer_Choice.upper() == RPC_Choices[0]) or (Player_Choice.upper() == RPC_Choices[2] and Computer_Choice.upper() == RPC_Choices[1]):
         Player_Score += 1
         print(Player+" "+str(Player_Score)+" -(You Won)- "+str(Computer_Score)+" Computer"+"\n")
     elif Player_Choice.upper() == Computer_Choice.upper():
         print(Player+" "+str(Player_Score)+" -(its a Tie)- "+str(Computer_Score)+" Computer"+"\n")
+    elif not Player_Choice.upper() in RPC_Choices:
+        Round -=1
+        print("[Consol] ERROR Please only use the words given to you. ")
     Round +=1
     
     if Round == 15:
