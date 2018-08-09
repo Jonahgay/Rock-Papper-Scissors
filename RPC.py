@@ -1,9 +1,6 @@
 from random import choice
 from time import sleep
 
-'''
-
-'''
 
 RPC_Choices = ["ROCK","PAPER","SCISSORS"]
 Player_Score = 0
@@ -13,6 +10,10 @@ Round = 1
 
 
 doRPC=input("Would you like to play Rock Paper Scissors with a bot ?: \n")
+
+def Error_Sure():
+    print("[Consol] ERROR only awnser with Yes or No on these types of questions")
+    exit()
 
 if doRPC.upper() == "YES":
     sleep(0.5)
@@ -30,11 +31,9 @@ elif doRPC.upper()=="NO":
         print("Lets play the game then...")
         sleep(2)
     else:
-        print("[Consol] ERROR only say Yes or No on these types of questions")
-        exit()
+        Error_Sure()
 else:
-    print("[Consol] ERROR only type Yes or No on these kind of questions")
-    exit()
+    Error_Sure()
 
 del doRPC
 try:
@@ -63,7 +62,7 @@ while True:
         Round -=1
         print("[Consol] ERROR Please only use the words given to you. ")
     Round +=1
-    
+ 
     if Round == 15:
         if Player_Score > Computer_Score:
             print("---------You WIN !!---------")
