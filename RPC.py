@@ -12,6 +12,7 @@ doRPC=input("Would you like to play Rock Paper Scissors with a bot ?: \n")
 
 def Error_Sure():
     print("[Consol] ERROR only awnser with Yes or No on these types of questions")
+    input("Press Enter to close the Terminal")
     exit()
 
 if doRPC.upper() == "YES":
@@ -65,8 +66,11 @@ while True:
     if Round == 15:
         if Player_Score > Computer_Score:
             print("---------You WIN !!---------")
+            input("Press Enter to close the Terminal")
         elif Player_Score < Computer_Score:
             print("---------You LOSE !!---------")
+            input("Press Enter to close the Terminal")
         elif Player_Score == Computer_Score:
             print("---------Its a Tie !!---------")
+            input("Press Enter to close the Terminal")
         break
